@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-form-field class="full-width">
+      <input matInput [formControl]="todoInput" placeholder="Add new task" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addTodo()">Add</button>
+  </mat-card>
+  
+  <mat-list>
+    <mat-list-item *ngFor="let todo of todos">
+      <mat-checkbox [checked]="todo.completed" (change)="toggleComplete(todo)">
+      </mat-checkbox>
+      <span [class.completed]="todo.completed">{{ todo.title }}</span>
+      <button mat-icon-button color="warn" (click)="deleteTodo(todo.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+  

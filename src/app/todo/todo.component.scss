@@ -1,0 +1,13 @@
+.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  .full-width {
+    width: 100%;
+  }
+  mat-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
